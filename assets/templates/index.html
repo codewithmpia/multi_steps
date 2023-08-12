@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <main id="main">
+        <div class="container p-3 rounded" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;">
+            <form hx-post="{{ url_for('index') }}" hx-target="#main" hx-swap="innerHTML">
+                {{ username_form.csrf_token }}
+                <div class="form-group mb-3">
+                    <label for="username" class="form-label mb-2">Nom d'utilisateur</label>
+                    {{ username_form.username(class="form-control") }}
+                </div>
+                <button type="submit" class="btn btn-primary">Suivant</button>
+            </form>
+        </div>
+    </main>
+{% endblock main %}

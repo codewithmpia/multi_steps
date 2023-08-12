@@ -1,0 +1,23 @@
+<main id="main">
+    <div class="container p-3" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;">
+        <form hx-post="{{ url_for('edit_email') }}" hx-target="#main" hx-swap="innerHTML">
+            {{ email_form.csrf_token }}
+            <div class="form-group mb-3">
+                <label for="email" class="form-label mb-2">Adresse email</label>
+                {{ email_form.email(class="form-control", value=email) }}
+            </div>
+            
+            <div>
+                <button 
+                    class="btn btn-secondary"
+                    hx-get="{{ url_for('edit_username') }}"
+                    hx-target="#main"
+                    hx-swap="innerHTML"
+                >
+                Précédent
+            </button>
+                <button type="submit" class="btn btn-primary">Suivant</button>
+            </div>
+        </form>
+    </div>
+</main>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {{ bootstrap.load_css() }}
+
+    <style>
+        .container {
+            max-width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center my-4">
+        <h1 class="display-5 fw-bold text-primary">Multi steps form</h1>
+        <p class="fs-5">Formulaire multi-steps avec Flask, Flask-Session, Flask-SQLALCHemy, Flask-Bootstrap et HTMX</p>
+        <hr class="w-25 m-auto">
+    </div>
+    {% block main %}
+    {% endblock main %}
+
+    {{ bootstrap.load_js() }}
+    <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+</body>
+</html>

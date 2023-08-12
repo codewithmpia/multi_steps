@@ -1,0 +1,14 @@
+<main id="main">
+    <div class="container p-3" style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+        <div class="alert alert-success" role="alert">
+            <strong>Inscription effectuée avec succès.</strong>
+        </div>
+        <button
+            class="btn btn-secondary"
+            hx-get="{{ url_for('index')}}"
+            hx-target="body"
+        >
+            Aller à l'accueil
+        </button>
+    </div>
+</main>
